@@ -36,7 +36,7 @@ apt-get install -y apache2 php wget nano
 
 Install extra dependencies:
 ```
-apt-get install -y php7.4-gd php7.4-json php7.4-mysql php7.4-curl php7.4-mbstring \ php-intl php-imagick php7.4-xml php7.4-zip
+apt-get install -y php7.4-gd php7.4-json php7.4-mysql php7.4-curl php7.4-mbstring php-intl php-imagick php7.4-xml php7.4-zip
 ```
 
 Install maria db dependencies:
@@ -157,7 +157,7 @@ Automated approach
 docker build -f Dockerfile -t linux-nextcloud:20.04 .
 ```
 
-2) Instantiates container and connects it to standard console.
+2) Instantiate container and connects it to standard console.
 ```
 docker run -p 8100:80 -it linux-nextcloud:20.04 /bin/bash
 ```

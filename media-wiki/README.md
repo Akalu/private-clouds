@@ -171,7 +171,7 @@ Use Dockerfile file to perform steps 1-10; perform step 11 manually:
 docker build -f Dockerfile -t linux-media-wiki:20.04 .
 ```
 
-2) Instantiates container and connects it to standard console.
+2) Instantiate container and connects it to standard console.
 ```
 docker run -p 8082:80 -it linux-media-wiki:20.04 /bin/bash
 ```

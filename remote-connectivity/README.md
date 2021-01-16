@@ -9,14 +9,14 @@ This guide can be useful in the situation when container is placed on remote hos
 Overview
 ================
 
-Steps (1) and (2) can be omitted if you are already on Linux
+Steps (1) and (2) can be used to create a container with linux + ssh toolset
 
 1) Builds image with Ubuntu distribution and tag linux-ssh:20.04. Note the dot at the end of the command.
 ```
 docker build -f Dockerfile-min -t linux-ssh:20.04 .
 ```
 
-2) Instantiates container and connects it to standard console.
+2) Instantiate container and connect it to standard console.
 ```
 docker run -p 14403:22 -it linux-ssh:20.04 /bin/bash
 ```
@@ -41,7 +41,7 @@ netstat -tulpn | grep LISTEN
 Get the container’s IP address by using the docker inspect command and filtering out the results:
 
 ```
-docker inspect -f "{{ .NetworkSettings.IPAddress }}" ee477a0d9c0b
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" <container_id>
 ```
 This command should return the ip address of container to ssh into
 
@@ -53,12 +53,13 @@ ping <IP_ADDRESS>
 6) Directly connect to container via ssh.
 
 Note, it is not a good idea to make root available via ssh. It would be better to add a new user and disable root ssh. We investigate exactly this case and due to this added a new user (webssh).
-Open sshd_config file and set line ```PermitRootLogin no```, using the followig command
+Open sshd_config file and set line ```PermitRootLogin no```, using the followig command to open file for editing
 ```
 nano /etc/ssh/sshd_config
 ```
 
-Use the SSH tool to connect to the image (works both on Windows and Linux host machines; for Windows have to install OpenSSH):
+Use the SSH tool to connect to the image (works both on Windows and Linux host machines; for Windows have to install OpenSSH).
+For example, if you are using Windows machine for your experiments to run docker containers, the command can be like so:
 ```
 ssh -p 14403 webssh@localhost
 ```
@@ -88,7 +89,7 @@ chmod 700 /home/webssh/.ssh
 chmod -R 644 /home/webssh/.ssh/authorized_keys
 ```
 
-Open sshd_config file and set lines: 
+Finally open sshd_config file and set lines: 
 ```
 PasswordAuthentication no
 PubkeyAuthentication yes
@@ -103,7 +104,7 @@ nano /etc/ssh/sshd_config
 Restart the ssh daemon on host side and we are done.
 
 
-Recipe to use PyTTY for connection
+Recipe to use PuTTY for connection
 ===================================
 
 1) Download and install PuTTY, PuTTYgen and Pageant
