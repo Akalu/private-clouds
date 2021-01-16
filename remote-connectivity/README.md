@@ -63,7 +63,7 @@ For example, if you are using Windows machine for your experiments to run docker
 ```
 ssh -p 14403 webssh@localhost
 ```
-We done, one can execute commands as a webssh user.
+We are done, one can execute commands as a webssh user.
 
 7) Password-free SSH access 
 
@@ -121,4 +121,4 @@ Highlight the Auth sub-category and click the Browse button and select your prev
 
 Return to the Session Category and enter a name for this profile then click the Save button.
 
-
+Note: the format of cryptografic keys is different for OpenSSH and those used by PuTTY, so you have to convert private key to .ppk format (use PuTTYgen for that)
