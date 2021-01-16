@@ -53,7 +53,7 @@ ping <IP_ADDRESS>
 6) Directly connect to container via ssh.
 
 Note, it is not a good idea to make root available via ssh. It would be better to add a new user and disable root ssh. We investigate exactly this case and due to this added a new user (webssh).
-Open sshd_config file and set line ```PermitRootLogin no```, using the followig command to open file for editing
+Open sshd_config file and set line ```PermitRootLogin no```, using the following command to open file for editing
 ```
 nano /etc/ssh/sshd_config
 ```
@@ -83,6 +83,12 @@ mkdir /home/webssh/.ssh
 mkdir /home/webssh/.ssh/authorized_keys
 docker cp test_rsa.pub <container_id>:/home/webssh/.ssh/authorized_keys/test_rsa.pub
 ```
+Note, the standard approach to hold all authorized keys is using just one file, namely authorized_keys (all keys must be on separate lines, if there are more than one of them). In this case the last 2 lines should look like:
+```
+docker cp test_rsa.pub <container_id>:/home/webssh/test_rsa.pub
+cat /home/webssh/test_rsa.pub >> /home/webssh/.ssh/authorized_keys
+```
+
 Set permissions for public key and folders:
 ```
 chmod 700 /home/webssh/.ssh
@@ -95,6 +101,12 @@ PasswordAuthentication no
 PubkeyAuthentication yes
 AuthorizedKeysFile      /home/webssh/.ssh/authorized_keys/test_rsa.pub
 ```
+
+If all keys are held in one file (authorized_keys) the last line should look like (one can specify many files)
+```
+AuthorizedKeysFile      /home/webssh/.ssh/authorized_keys
+```
+
 
 One can use the following command to edit config file(s):
 ```
