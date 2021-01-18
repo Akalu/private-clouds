@@ -237,7 +237,7 @@ Mon Jan 18 13:54:36 2021 Data Channel: using negotiated cipher 'AES-256-GCM'
 Mon Jan 18 13:54:36 2021 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
 Mon Jan 18 13:54:36 2021 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
 Mon Jan 18 13:54:36 2021 interactive service msg_channel=0
-Mon Jan 18 13:54:36 2021 ROUTE_GATEWAY 172.16.0.3/255.255.240.0 I=16 HWADDR=f4:6d:04:18:41:f9
+Mon Jan 18 13:54:36 2021 ROUTE_GATEWAY 172.16.0.3/255.255.240.0 I=16 HWADDR=ff:ff:ff:18:13:19
 Mon Jan 18 13:54:36 2021 open_tun
 Mon Jan 18 13:54:36 2021 TAP-WIN32 device [Ethernet 2] opened: \\.\Global\{08EC22C6-33AD-401E-8E51-3DD64DCE7095}.tap
 Mon Jan 18 13:54:36 2021 TAP-Windows Driver Version 9.21 
