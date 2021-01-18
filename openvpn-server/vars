@@ -1,0 +1,6 @@
+export KEY_COUNTRY="UK"
+export KEY_PROVINCE="UK"
+export KEY_CITY="London"
+export KEY_ORG="Cloud ORG"
+export KEY_EMAIL="info@cloud.com"
+export KEY_OU="IT"
