@@ -12,7 +12,7 @@ RUN apt-get update
 RUN apt-get install -y openvpn nano unzip ufw easy-rsa iptables sudo 
 
 
-# copy to working directory
+# copy server configuration
 COPY ${SRV_CONF} /etc/openvpn/test_server.conf
 
 	

@@ -84,27 +84,28 @@ cp -r /usr/share/easy-rsa/ /etc/openvpn
 cd /etc/openvpn/easy-rsa
 ```
 The whole list of commands of easyrsa script:
-
-  init-pki<bk/>
-  build-ca [ cmd-opts ]<bk/>
-  gen-dh<bk/>
-  gen-req <filename_base> [ cmd-opts ]<bk/>
-  sign-req <type> <filename_base><bk/>
-  build-client-full <filename_base> [ cmd-opts ]<bk/>
-  build-server-full <filename_base> [ cmd-opts ]<bk/>
-  revoke <filename_base> [cmd-opts]<bk/>
-  renew <filename_base> [cmd-opts]<bk/>
-  build-serverClient-full <filename_base> [ cmd-opts ]<bk/>
-  gen-crl<bk/>
-  update-db<bk/>
-  show-req <filename_base> [ cmd-opts ]<bk/>
-  show-cert <filename_base> [ cmd-opts ]<bk/>
-  show-ca [ cmd-opts ]<bk/>
-  import-req <request_file_path> <short_basename><bk/>
-  export-p7 <filename_base> [ cmd-opts ]<bk/>
-  export-p12 <filename_base> [ cmd-opts ]<bk/>
-  set-rsa-pass <filename_base> [ cmd-opts ]<bk/>
-  set-ec-pass <filename_base> [ cmd-opts ]<bk/>
+```
+  init-pki
+  build-ca [ cmd-opts ]
+  gen-dh
+  gen-req <filename_base> [ cmd-opts ]
+  sign-req <type> <filename_base>
+  build-client-full <filename_base> [ cmd-opts ]
+  build-server-full <filename_base> [ cmd-opts ]
+  revoke <filename_base> [cmd-opts]
+  renew <filename_base> [cmd-opts]
+  build-serverClient-full <filename_base> [ cmd-opts ]
+  gen-crl
+  update-db
+  show-req <filename_base> [ cmd-opts ]
+  show-cert <filename_base> [ cmd-opts ]
+  show-ca [ cmd-opts ]
+  import-req <request_file_path> <short_basename>
+  export-p7 <filename_base> [ cmd-opts ]
+  export-p12 <filename_base> [ cmd-opts ]
+  set-rsa-pass <filename_base> [ cmd-opts ]
+  set-ec-pass <filename_base> [ cmd-opts ]
+```
 
 6) Generate a PKI directory and a set of certificates:
 ```
