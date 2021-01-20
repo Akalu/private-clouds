@@ -26,3 +26,29 @@ Overview
 
 See the appropriate README files for installation and run details
 
+Notes
+======
+
+Useful commands
+
+Get the list of images:
+```
+docker images -a
+```
+
+Get the list of containers:
+```
+docker ps
+```
+
+Clean up local docker registry:
+```
+docker image prune -a --force --filter "until=2021-01-04T00:00:00"
+```
+
+Clean up local docker registry from images with <none> tag:
+```
+docker rmi --force $(docker images -q --filter "dangling=true")
+```
+
+
