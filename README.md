@@ -20,9 +20,9 @@ Overview
 
 /media-wiki - in short, this is just the implementation of content management system (CMS) on the basis of LAMP stack and MediaWiki (https://www.mediawiki.org/wiki/MediaWiki).
 
-/openvpn-server - how to setup a vpn server
+/openvpn-server - this recipe describes how to setup a vpn server
 
-/remote-connectivity - describes how to establish secure connectivity to containers on the basis of OpenSSH and private-public key pairs.
+/remote-connectivity - this recipe describes how to establish a secure connectivity to containers on the basis of OpenSSH and private-public key pairs.
 
 See the appropriate README files for installation and run details
 
